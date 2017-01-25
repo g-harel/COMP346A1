@@ -1,0 +1,13 @@
+Task 1: Atomicity Bug Hunt
+
+In the Task4.Account's deposit and withdraw methods, balance is incremented by writing `balance = balance + 10;`. This operation must read the current value in memory, add 10 to it and replace the value in memory with the new incremented number. However, when multiple threads read the value at the same time, they will modify the value without knowing that it is also being used/modified somewhere else.
+
+
+Task 2: Starting Order
+
+The starting order of threads cannot be guaranteed and will most likely be different every execution. On creation, a new thread will do nothing until it's start method is called. When that method is called, a thread goes into a runnable state where it will be ran at the discretion of the scheduler. After the completion of it's run method, the thread is terminated.
+
+
+Task 5: Synchronized Blocks vs Synchronized Methods
+
+The results from running both synchronization techniques shows an advantage to the block level synchronization instead of method level synchronization (50s vs 70s). This difference can be explained by the fact that synchronization prevents different threads from accessing a shared data structure while the synchronized block is executing. Therefore, it is better for performance to restrict as much as possible the amount of calculations made within the blocks. In the current case, a method level synchronization also includes the fake computations before and after the balance increment/decrement. By using block level synchronisation, we can target the relevant calculation specifically and give access to other threads to the account balance while doing other calculations in the method.
