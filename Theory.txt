@@ -1,0 +1,70 @@
+Question 1
+
+    I. An operating system is software made to assist a user's interaction with hardware. It executes programs and manages memory, computation and devices.
+
+    II.
+
+        Batch: Computer operations are prepared beforehand and given to a computer to run. There is no interaction between the user and the computer.
+
+        Time Sharing: Multiple users can use a same computer at the same time. The CPU switches between jobs often to accommodate more users and reduce idle time.
+
+        Dedicated: Operating System made to run with specific hardware to enable all the features it supports.
+
+        Real Time: System that is ready and listening for events that can be processed and acted on within short delay. This is done using task schedulers and interrupt handlers.
+
+        Multiprogramming: Allows programs to share a computer's resources by alternating between them. This gives the illusion to the user that the computer is doing multiple tasks at once.
+
+    III. When a user needs very large bursts of computing power, but otherwise leaves the system idle. In this case it would be preferable to share access to a more powerful computer instead of having multiple less powerful ones.
+
+
+Question 2
+
+    a) https://i.gyazo.com/9aff846f24845db4a61ee5c105535328.png
+
+    b) https://i.gyazo.com/9aff846f24845db4a61ee5c105535328.png
+
+    c) Throughput
+            P1 = 2/65 ~= 0.03077
+            P2 = 2/50 =  0.4
+        By using multiprogramming, an operating system can increase the efficiency of a cpu. This is caused by a more efficient use of resources by switching between processes while no computations are being made.
+
+
+Question 3
+
+    I. In situations where events are infrequent or require immediate action, an interrupt based solution is preferable. However, when delay is not a problem and events happen on a regular basis, polling is an advantageous option.
+
+    II. Yes it is possible, but since polling can be inefficient it is not the preferred solution since it can negate the benefits of a DMA controller.
+
+    IV.
+
+        a) Context switches must be atomic because otherwise, there is a risk that the new process would use old data from the registers therefore completely breaking and corrupting the execution of a program.
+
+        b) Operations that require atomicity can block all other operations on the processor until it's execution completes. This process ensures that there is not possibility that another process interferes with the atomic one.
+
+
+Question 4
+
+    I. The kernel ensures that I/O interactions are performed in the correct order and that multiple processes do not interfere with each other when performing I/O. It also allows greater control and security over processes by limiting their access to certain features.
+
+    II.
+
+        a) The malicious user could have replaced the code in the kernel space at the address specified by the interrupt vector, or could have changed that address to point to his program in the user space.
+
+        b) To fix the first problem, an operating system should not allow access to the kernel space from within the user space. The second problem can be fixed by preventing the interrupt vector's target address from being outside the kernel space.
+
+
+Question 5
+
+    a) If there are N or more available cores, all the processes can be ran concurrently. This would mean that the total execution time would only be limited by the longest time process.
+
+    b) If there is a single core, then the total time to execute all processes will be the sum of all of them. Including the additional overhead time that a processor takes to switch between processes also means the total time will be larger than the total sum.
+
+
+Question 6
+
+    Clear memory (ii), Copy from one register to another (v), Turn off interrupts (vi), and Switch from user to monitor mode (vii) should all be privileged instructions. These instructions could cause issues if given access from the user space since they allow absolute control over a computer and present a security risk.
+
+
+Question 7
+
+    The primary differences between a network operating system and a distributed operating system are that the distributed operating system acts more as a single OS on multiple computers whereas a network operating system acts as a system where the computers are an interface into the main one but act independently. Common routines between these operating systems would be the process of communicating between the computers that make up each of them. Even if resources, memory and function are handled differently, in both cases there is a need dispatch actions and update one or more other computer in the system.
