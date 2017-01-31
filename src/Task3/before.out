@@ -1,0 +1,25 @@
+Print initial account balances
+Task4.Account: 1234 	Name: Mike 	Balance:	1000.0
+Task4.Account: 2345 	Name: Adam 	Balance:	2000.0
+Task4.Account: 3456 	Name: Linda 	Balance:	3000.0
+Task4.Account: 4567 	Name: John 	Balance:	4000.0
+Task4.Account: 5678 	Name: Rami 	Balance:	5000.0
+Task4.Account: 6789 	Name: Lee 	Balance:	6000.0
+Task4.Account: 7890 	Name: Tom 	Balance:	7000.0
+Task4.Account: 8901 	Name: Lisa 	Balance:	8000.0
+Task4.Account: 9012 	Name: Sam 	Balance:	9000.0
+Task4.Account: 4321 	Name: Ted 	Balance:	10000.0
+Task4.Depositor and Withdrawal threads have been created
+Print final account balances after all the child thread terminated...
+Task4.Account: 1234 	Name: Mike 	Balance:	-240.0
+Task4.Account: 2345 	Name: Adam 	Balance:	480030.0
+Task4.Account: 3456 	Name: Linda 	Balance:	-116150.0
+Task4.Account: 4567 	Name: John 	Balance:	4650.0
+Task4.Account: 5678 	Name: Rami 	Balance:	477380.0
+Task4.Account: 6789 	Name: Lee 	Balance:	6000.0
+Task4.Account: 7890 	Name: Tom 	Balance:	465130.0
+Task4.Account: 8901 	Name: Lisa 	Balance:	7930.0
+Task4.Account: 9012 	Name: Sam 	Balance:	9400.0
+Task4.Account: 4321 	Name: Ted 	Balance:	4990.0
+Elapsed time in milliseconds 34273
+Elapsed time in seconds is 34.273
